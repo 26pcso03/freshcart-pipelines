@@ -11,7 +11,7 @@ except ImportError:
 @transformer
 def transform(df, *args, **kwargs):
     train_df, test_df = train_test_split(
-        df, test_size=0.3, random_state=42, stratify=df['target']
+        df, test_size=0.2, random_state=42, stratify=df['target']
     )
     train_df = train_df.copy()
     test_df = test_df.copy()
